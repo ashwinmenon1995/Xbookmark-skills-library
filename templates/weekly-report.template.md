@@ -6,11 +6,11 @@ New bookmarks: 0
 
 ## Agent did it
 
-Reversible, low-risk actions already taken.
+Dispatched to one of your agents, or already applied. Reversible and low-risk only.
 
-| Bookmark | Skill | What the agent did |
-|---|---|---|
-|  |  |  |
+| Bookmark | Skill | Routed to | Status | What was done |
+|---|---|---|---|---|
+|  |  |  |  |  |
 
 ## Needs you
 
