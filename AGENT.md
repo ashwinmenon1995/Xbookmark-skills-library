@@ -9,7 +9,7 @@ Run this file as a repeating cycle:
 
 Then repeat on new bookmarks.
 
-Write the user's files in their workspace, not in this repo. This repo holds the instructions, the templates, and one example.
+Write the user's files in their workspace, not in this repo. This repo holds the instructions and the templates.
 
 Do not post, send, pay, sign up, or delete anything unless the user explicitly tells you to do that specific thing. Do not put that action in a task you hand to another agent either.
 
@@ -51,7 +51,7 @@ If you cannot open a source, say so in the entry and leave the unknown parts bla
 
 ## 2. Organize into the user's categories
 
-Cluster what this user saved. Do not reuse a fixed category list, including the categories in `examples/example-library.md`. That file is one person's library. This user's will differ.
+Cluster what this user saved. Do not reuse a fixed category list. Name categories from this user's bookmarks only.
 
 Propose 5–12 categories. Name each one in the user's own terms, using the words their bookmarks actually use. If they have fewer than 5 bookmarks, propose fewer categories and say so. Do not invent categories the saves do not support.
 
