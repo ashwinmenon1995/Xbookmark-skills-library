@@ -29,8 +29,6 @@ The cycle only dispatches reversible, low-risk work. It does not post, send, pay
 
 ## How to contribute
 
-Open a pull request to improve `AGENT.md` or the files in `templates/`. Keep the change generic. Do not add names, handles, or account details.
+Open a pull request to improve `AGENT.md` or the files in `templates/`. Keep the change generic. Do not add names, handles, account details, bookmark exports, or categories taken from one person's saves.
 
-`examples/example-library.md` is one finished library. Do not rewrite its entries. Your categories will be different.
-
-Do not commit your own `my-skills.md`, `agents.md`, dispatch queue, reports, or bookmark exports.
+Do not commit your own `my-skills.md`, `agents.md`, dispatch queue, or reports.
