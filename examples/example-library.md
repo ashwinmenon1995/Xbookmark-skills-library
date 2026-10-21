@@ -1,3 +1,5 @@
+> Example only: this is one example library whose categories came from one person's bookmarks, and yours will differ.
+
 # skills.md — Public AI skills library
 
 Techniques, workflows and tool capabilities for AI agents and AI tools, extracted from public posts, articles and videos. Each entry is a summary in our own words plus a link to the source — read the original for full detail. See README.md for how to contribute.
