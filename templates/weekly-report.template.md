@@ -1,6 +1,6 @@
 # Weekly action report
 
-Week of YYYY-MM-DD
+Run of YYYY-MM-DD
 
 New bookmarks: 0
 
@@ -14,7 +14,7 @@ Dispatched to one of your agents, or already applied. Reversible and low-risk on
 
 ## Needs you
 
-Each row has one next step.
+Each row has one next step. Include human-doable items and items still `queued` because no agent is listed yet.
 
 | Bookmark | Skill | Next step |
 |---|---|---|
