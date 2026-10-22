@@ -1,65 +1,34 @@
-# Public AI Skills Library
+# Turn your bookmarks into action
 
-A free, open library of **techniques, workflows and tool capabilities for AI agents and AI tools**. You can use it with your own accounts and agents. Each entry summarizes, in our own words, one technique from a public post, article or video, and links to the original.
+This kit starts a repeating cycle. It pulls your bookmarks, organizes them into your own categories, triages each item as human-doable or agent-doable, dispatches agent-doable items to your agents so the learning is applied in everyday workflows, sends human-doable items to you with one next step, and repeats on new bookmarks.
 
-The library lives in [`skills.md`](skills.md).
-
-## How it's built
-1. **Collect sources.** Bookmarks and saves from X, plus similar public sources: articles, threads, YouTube and podcast episodes, docs and repos.
-2. **Read in full.** Long posts are read with their thread continuations and article bodies. Videos are transcribed in full (platform captions where available, otherwise speech-to-text such as Whisper). Nothing is summarized from the title alone. When a source can't be opened, the entry says so.
-3. **Extract techniques.** Each concrete, reusable technique becomes one entry: what it does, how to use it, the key steps, and the source link. Text is summarized, not copied, and quotes stay short.
-4. **Mark how it was read.** Every entry records its access level so readers know how much to trust it.
-
-Claims and numbers belong to the source authors and are not independently verified. Nothing here is financial, legal or medical advice.
-
-## Categories
-1. Growth & organic distribution
-2. Marketing, copy & launches
-3. Paid ads & creator programs
-4. Sales / GTM & outbound
-5. SEO / AEO (AI search)
-6. Automation & AI agents
-7. Research & market intelligence
-8. Coding & building
-9. Design / creative (web, image, video)
-10. Ecom & conversion (CRO)
-11. Founder, strategy & fundraising
-12. Quant / prediction-market methods (educational)
-13. AI/ML understanding & mental models
-
-The index at the top of `skills.md` lists the entry IDs in each category.
-
-## Entry format
+```mermaid
+flowchart TD
+  pull[Pull bookmarks] --> organize[Organize into your categories]
+  organize --> triage{Triage each item}
+  triage -->|Agent-doable| dispatch[Dispatch to your agents]
+  triage -->|Human-doable| human[Send you one next step]
+  dispatch --> repeat[Repeat on new bookmarks]
+  human --> repeat
+  repeat --> pull
 ```
-### S-### · Title
-- **Source:** @handle · post date · url
-- **Access:** full text | full transcript | title only (couldn't access) | post text only (body/thread not retrievable)
-- **Added by:** name or agent · YYYY-MM-DD
-- **What it does:** …
-- **How to use it:** …
-- **Key details / steps:** …
-```
-IDs are permanent. Never renumber or reuse one.
 
-## CONTRIBUTING (people and agents)
-- **Append only.** Add new entries at the end of the matching category section, or under "Appended entries" at the bottom. Then add the ID to that category's row in the Index and bump the count.
-- **Never rewrite or delete someone else's entry.** To correct or extend one, append a new entry that references it (e.g. "Update to S-018: …").
-- **One entry per technique.** If a source teaches three distinct techniques, write three entries.
-- **Always include the source link and how it was read** (Access field). Don't write entries from titles alone without marking them "title only".
-- **Fill in Added by** with your name/handle, or the agent name, plus the date.
-- **Summarize in your own words.** No long verbatim quotes, and no private links, personal data, account details or anything about your own business. Keep that in your own private notes.
-- **Next ID** = highest existing S-number + 1. If two PRs collide, the later one renumbers its new entries before merging.
-- **Submit via commit or pull request.** One PR can add many entries. Keep unrelated formatting changes out of it.
+## Quick start
 
-## Use it with your own agent
-1. **Read it:** point your agent (Grok Bot, Claude Code, Cursor, etc.) at the raw `skills.md` URL, or clone the repo. Tell it to look up relevant entries by category before doing growth, content, agent-building or design work.
-2. **Run the same pipeline on your own sources:**
-   - Export your X bookmarks with the official X API or an authorized connector, using your own account. Don't scrape.
-   - For each one, fetch the full text (threads, articles) or transcribe the video in full.
-   - Extract one entry per technique in the format above, with the Access field filled in.
-   - Keep a processed-ids file so reruns only handle new bookmarks.
-   - Write anything specific to you (your business, decisions, fit verdicts) to a separate private file, never to the public library.
-3. **Contribute back:** append your generic entries and open a PR.
+Point your agent at this repo and say: run AGENT.md on my bookmarks.
 
-Example instruction for an agent:
-> "Read skills.md. For each of my new bookmarks, read the full source, then append one entry per reusable technique to skills.md using the entry format, with Access and Added by filled in. Put anything about me or my business in my private notes file instead. Don't edit existing entries."
+Any agent that can read a repo can run the cycle (Claude, Codex, Cursor, Grok, or another). It will ask you to connect or export your bookmarks from X, your browser, or a read-later app, and to list the agents you want work sent to.
+
+## What you get
+
+- Your own skills library (`my-skills.md`): categories named from your bookmarks, and one entry per bookmark.
+- A routing table (`agents.md`) and a dispatch queue (`dispatch-queue.md`). Each agent-doable item is sent to the agent that fits it. Status is sent, applied, or needs human.
+- A weekly action report, split into what the agent did and what needs you, with a next step on each item that needs you.
+
+The cycle only dispatches reversible, low-risk work. It does not post, send, pay, sign up, or delete unless you tell it to.
+
+## How to contribute
+
+Open a pull request to improve `AGENT.md` or the files in `templates/`. Keep the change generic. Do not add names, handles, account details, bookmark exports, or categories taken from one person's saves.
+
+Do not commit your own `my-skills.md`, `agents.md`, dispatch queue, or reports.
