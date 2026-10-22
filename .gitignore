@@ -1,0 +1,11 @@
+# Private bookmark-kit output. Never commit these, including on a public fork.
+my-skills.md
+agents.md
+dispatch-queue.md
+processed-ids.md
+weekly-report-*.md
+content-plan-*.md
+what-works-for-me.md
+inbox/
+private/
+transcripts/
